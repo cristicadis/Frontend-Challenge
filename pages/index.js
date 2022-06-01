@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Heading from "./components/Heading";
 import Records from "./frontend_challenge_activities.json";
 
 export default function Home() {
