@@ -1,110 +1,193 @@
 .container {
+  display: flex;
+  flex-direction: column;
   background-color: #f1f2f3;
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
-  
-
-}
-
-.content {
-  padding-top: 30px;
-  max-width: 1220px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 100px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: 1;
-  background-color: #f9f9f9;
-  box-shadow: 0px 1px 3px #bbb;
-}
-
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-.title a {
-  font-weight: bold;
+  align-content: flex-end;
 
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: none;
+.filters {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  gap:10px;
 }
+
+
+
+
+
+
+
 
 .title {
+  display: flex;
+  align-items: center;
   line-height: 1.15;
-  font-size: 2rem;
-  margin: 0;
-  margin-bottom: 50px;
-  padding: 0;
+  font-size: 18px;
   text-transform: uppercase;
-  font-weight: 300;
+
   color:#242B33;
   text-align: center;
+  align-self: center;
+  height: 200px;
+
+
+}
+.title h1{
+  font-weight: 400;
+}
+
+
+
+
+
+.filter1,
+.filter2 {
+  cursor:pointer;
+  display:inline-block;
+  position:relative;
+
+  color:black;
+  border:1px solid #ccc;
+  width: 140px;
+  border-radius: 3px;
+  height: 22px;
+  font-size: 12px;
+
+  background-color:white;
+
+
+}
+
+
+.filter1 option,
+.filter2 option {
+
+
+
+    border:1px solid #ccc;
+    background-color:white;
+    -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+.content {
+  padding-bottom: 100px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 1px 3px #bbb;
+  width: 100vw;
+  max-width: 1200px;
+}
+
+.itemsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap:20px;
+
+}
+
+.itemDetail {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  flex: 1;
+  gap:3px;
 }
 
 .workouts {
-  border: 1px solid #dfdfdf;
-  padding: 15px;
+
+  padding: 35px;
   font-size: 15px;
   width: 100%;
 }
 
-.stepTitle {
-  padding: 20px 0 35px 0;
-  text-align: center;
-  font-weight: 300;
-}
 
-.itemscontainer {
-  font-weight: 300;
-  letter-spacing: .06em;
-  line-height: 1.6em;
-  text-transform: none;
-}
+
 
 .item {
-  padding: 8px 32px 16px ;
-  border-top-width: 1px;
-  border-top-style: solid;
+  /* padding: 8px 32px 16px ; */
+  border-width: 1px;
+  border-bottom-style: solid;
+  /* border-top-width: 1px;
+  border-top-style: solid; */
   border-color: rgba(0,0,0,0.1);
   align-items: center;
   display: flex;
   text-align: left;
-  justify-content: space-between;
-  max-width: 800px;
-  margin-right: auto;
-  margin-left: auto;
+
+  max-width: 400px;
+  min-width: 350px;
+
+  width: 31%;
+  height: 130px;
+  gap:15px;
 }
 
-.infotime {
-  flex-grow: 1;
-  margin-right: 16px;
-  font-size: 16px;
-  line-height: 22px;
-  min-width: 160px;
+.image {
+  width: 100px;
+  height: 70px;
+  overflow: hidden;
+
 
 }
+.image img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 3px;
+  object-fit: contain;
+
+}
+
+.infoitem {
+    font: 700 1rem / 1.5 LabGrotesque, Arial, sans-serif;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: pre-wrap;
+    text-align: inherit;
+    font-size: 12px;
+    color: rgb(33, 31, 43);
+    opacity: 1;
+    text-overflow: ellipsis;
+
+    overflow: hidden;
+}
+
 
 .location {
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 4px;
+
   color: rgba(0,0,0,0.55);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.details{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.details div {
+  border: 1px solid rgb(189, 188, 191);
+  border-radius: 50px;
+  padding: 0.25rem 0.5rem;
+  font: bold 11px / 12px LabGrotesque, Arial, sans-serif;
+  color: rgb(33, 31, 43);
 }
 
 .button {
@@ -118,6 +201,8 @@
   cursor: pointer;
   font-family: inherit;
   font-weight: 400;
+  width: 60px;
+  text-align: right;
 
 }
 
@@ -134,6 +219,14 @@
   align-items: center;
 }
 
+@media (max-width: 789px) {
+  .item {
+    min-width: 100%;
+
+  }
+
+
+}
 
 @media (max-width: 600px) {
   .content {
