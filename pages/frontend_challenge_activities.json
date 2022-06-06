@@ -28,7 +28,7 @@
           "bookingMinimum": 1,
           "bookingPeriod": 0.5,
           "cancelationPeriod": 1.5,
-          "city": "Zürich",
+          "city": "zürich",
           "description": "Gemeinsam starten wir mit eine belebenden Hatha Flow in den Tag und geniessen die frühen Morgenstunden. Dich erwartet eine Klasse, die sowohl auf Kraft als auch Flexibilität ausgerichtet ist. Mit dabei ist auch immer eine kleine Überraschung wie beispielsweise passende Atemübungen, Kopfmassagen etc.  \n\nDie Klasse ist geeignet für Anfänger und Intermediate und kann bei Bedarf auch auf English durchgeführt werden. Classes can be held in english too :)",
           "location": {
             "__type": "GeoPoint",

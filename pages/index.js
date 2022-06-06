@@ -4,8 +4,6 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import images from "./images.js"
 
-
-
 export default function Home() {
 
   let filter1 = [{key:1, name:"Country...", code:"Country..."},{key:2, name:"Switzerland",code:"CH"},{key:3, name:"Austria", code:"AT"}]
@@ -16,7 +14,9 @@ export default function Home() {
   const [valueFilter1, setValueFilter1] = useState("Country...");
   const [valueFilter2, setValueFilter2] = useState("Day...")
   const [filterSelected, setFilterSelected] = useState("Any");
-  const [click, setClick] = useState(0);
+  const [click, setClick] = useState(0); //check which button was clicked
+
+
 
 
   function handleFilter1(event){
@@ -54,8 +54,8 @@ export default function Home() {
 //detect which button is clicked and setClick = botton id
   const handleSubmit = (e) => {
       setClick(e.id);
+      
     };
-
 
 
   return (
@@ -100,7 +100,6 @@ export default function Home() {
 
                 {/* I used a map function to render all the elements from "arrayFiltered"*/}
 
-
               <div className={styles.itemsContainer}>
 
               {arrayFiltered.map(record =>{
@@ -111,7 +110,6 @@ export default function Home() {
                   if (record._source.categories[1]){
                     tags.push({"key":2 , "tag":record._source.categories[1].slice(3)});
                   }
-
 
                 return(
                     <div className={styles.item} key={record._source.id}>
@@ -135,7 +133,7 @@ export default function Home() {
                          </div>
 
                         <div className={styles.location}>
-                          {record._source.city}
+                          {record._source.zipCode} {record._source.city}
                         </div>
 
                         <div className={styles.details}>
