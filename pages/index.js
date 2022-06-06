@@ -54,7 +54,7 @@ export default function Home() {
 //detect which button is clicked and setClick = botton id
   const handleSubmit = (e) => {
       setClick(e.id);
-      
+
     };
 
 
@@ -133,7 +133,7 @@ export default function Home() {
                          </div>
 
                         <div className={styles.location}>
-                          {record._source.zipCode} {record._source.city}
+                          {record._source.zipCode} {record._source.city[0].toUpperCase()+record._source.city.slice(1)} 
                         </div>
 
                         <div className={styles.details}>
